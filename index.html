@@ -1,30 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Data Visualization Portfolio</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name – Data Visualization Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; }
-    .project { margin-bottom: 40px; }
-    iframe { width: 100%; height: 500px; border: 1px solid #ccc; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+      background-color: #f8faff;
+    }
+    header h1 {
+      font-size: 2.8em;
+      color: #3f61ff;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: auto;
+      color: #555;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: #3f61ff;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+    }
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .column {
+      flex: 1 1 250px;
+      max-width: 300px;
+    }
+
+    .column img {
+      height: 60px;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+
+    .portfolio-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background-color: #3f61ff;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .about img {
+      max-width: 300px;
+      border-radius: 8px;
+      margin: 20px;
+    }
+
+    .about-text {
+      max-width: 600px;
+      margin: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #f0f0f0;
+      color: #444;
+    }
+
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+      }
+    }
+
+    .portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(63, 97, 255, 0.75); /* translucent blue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  font-size: 1.1em;
+  font-weight: bold;
+}
   </style>
 </head>
 <body>
-  <h1>Data Visualization Portfolio</h1>
-  <p>Hi, I'm [Your Name]. Here are some of my interactive dashboards and data visualization work using Power BI and Looker Studio.</p>
 
-  <div class="project">
-    <h2>Retail Sales Dashboard – Looker Studio</h2>
-    <p>This dashboard tracks sales by category, region, and time. It includes drill-downs, filters, and trend analysis.</p>
-    <iframe width="600" height="900" src="https://lookerstudio.google.com/embed/reporting/fc2a1fce-63a9-4027-9227-985317da2bef/page/p_vroa57lqpd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-  </div>
+  <header>
+    <h1>Your Name</h1>
+    <p>Data Analyst & Visualization Specialist using Power BI, Looker Studio, and other tools to turn raw data into clear insights.</p>
+    <a href="mailto:your@email.com" class="btn">Get In Touch</a>
+  </header>
 
-  <div class="project">
-    <h2>Customer Segmentation – Power BI</h2>
-    <p>Explores customer clusters by demographics and purchase behavior using DAX and custom visuals.</p>
-    <img src="images/powerbi-dashboard.png" alt="Power BI Screenshot" style="width:100%; max-width:800px;">
-    <p><a href="https://app.powerbi.com/view?r=your-link">View Live Dashboard</a></p>
+  <section class="section">
+  <h2>Portfolio</h2>
+  <p>A few snapshots of recent dashboards and visual work.</p>
+
+  <div class="portfolio-gallery">
+    <div class="portfolio-item">
+      <img src="images/portfolio1.png" alt="Portfolio item 1">
+      <div class="overlay">
+        <div class="overlay-text">Sales Performance Dashboard (Power BI)</div>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="images/portfolio2.png" alt="Portfolio item 2">
+      <div class="overlay">
+        <div class="overlay-text">Customer Segmentation (Looker Studio)</div>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="images/portfolio3.png" alt="Portfolio item 3">
+      <div class="overlay">
+        <div class="overlay-text">AR Trends Over Time (Power BI)</div>
+      </div>
+    </div>
+    <!-- Add more items as needed -->
   </div>
+</section>
+
+
+  <section class="about">
+    <img src="your-photo.jpg" alt="Photo of You">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>I’m a data visualization professional passionate about helping teams tell clearer stories through data. I bring expertise across analytics, storytelling, and visual best practices. Whether it's strategic dashboards or one-time data projects, I love solving meaningful problems.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Portfolio</h2>
+    <p>A few snapshots of recent dashboards and visual work.</p>
+    <div class="portfolio-gallery">
+      <img src="images/portfolio1.png" alt="Portfolio item 1">
+      <img src="images/portfolio2.png" alt="Portfolio item 2">
+      <img src="images/portfolio3.png" alt="Portfolio item 3">
+      <img src="images/portfolio4.png" alt="Portfolio item 4">
+      <img src="images/portfolio5.png" alt="Portfolio item 5">
+      <img src="images/portfolio6.png" alt="Portfolio item 6">
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Name | Built with HTML + GitHub Pages
+  </footer>
+
 </body>
 </html>
