@@ -110,58 +110,65 @@
     }
 
     .portfolio-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 40px 20px;
-}
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
 
-.portfolio-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
-.portfolio-item img {
-  width: 100%;
-  display: block;
-  transition: transform 0.3s ease;
-}
+    .portfolio-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s ease;
+    }
 
-.portfolio-item:hover img {
-  transform: scale(1.05);
-}
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+    }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(63, 97, 255, 0.75); /* translucent blue */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(63, 97, 255, 0.75); /* translucent blue */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-.portfolio-item:hover .overlay {
-  opacity: 1;
-}
+    .portfolio-item:hover .overlay {
+      opacity: 1;
+    }
 
-.overlay-text {
-  color: white;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1.4;
-  word-wrap: break-word;
-  max-width: 90%;
-}
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .overlay-text {
+      color: white;
+      font-size: 1.1em;
+      font-weight: bold;
+      line-height: 1.4;
+      word-wrap: break-word;
+      max-width: 90%;
+    }
   </style>
 </head>
 <body>
