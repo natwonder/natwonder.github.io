@@ -260,25 +260,25 @@
     <p>A few snapshots of recent certifications.</p>
     <div class="portfolio-gallery">
       <div class="portfolio-item">
-        <img src="images/Cert-PowerBI.png" alt="Portfolio item 1">
+        <img class="cert-img" src="images/Cert-PowerBI.png" alt="Portfolio item 1">
         <div class="overlay">
           <div class="overlay-text">Power BI</div>
         </div>
       </div>
       <div class="portfolio-item">
-        <img src="images/Cert-RBasics.png" alt="Portfolio item 2">
+        <img class="cert-img" src="images/Cert-RBasics.png" alt="Portfolio item 2">
         <div class="overlay">
           <div class="overlay-text">R Scripting</div>
         </div>
       </div>
       <div class="portfolio-item">
-        <img src="images/Cert-Visualization.png" alt="Portfolio item 3">
+        <img class="cert-img" src="images/Cert-Visualization.png" alt="Portfolio item 3">
         <div class="overlay">
           <div class="overlay-text">R Visualization</div>
         </div>
       </div>
       <div class="portfolio-item">
-        <img src="images/Cert-Quickbooks.png" alt="Portfolio item 4">
+        <img class="cert-img" src="images/Cert-Quickbooks.png" alt="Portfolio item 4">
         <div class="overlay">
           <div class="overlay-text">Quickbooks ProAdvisor</div>
         </div>
@@ -303,7 +303,8 @@
     const closeBtn = document.querySelector(".close-btn");
   
     // Enable click-to-enlarge for all cert images
-    document.querySelectorAll('.portfolio-gallery .portfolio-item img').forEach(img => {
+    // Only targets images with the cert-img class
+    document.querySelectorAll('.cert-img').forEach(img => {
       img.addEventListener('click', () => {
         modal.style.display = "block";
         modalImg.src = img.src;
